@@ -1,23 +1,20 @@
+// Runtime: 103 ms
+// Memory Usage: 39.2 MB
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int max = 0;
-        int min = 0;
-        int newLength = 0;
-        // Sets the min and max for my solution
-        for (int i = 0; i < nums.length; i++) {
-            max = Math.max(max, nums[i]);
-            min = Math.min(min, nums[i]);
+        int x = 0;
+        int y = 0;
+        while (true) {
+            if ((x != y) && (nums[x] + nums[y] == target)) {
+                int[] temp = {x, y};
+                return temp;
+            }
+            if (y == nums.length - 1) {
+                y = 0;
+                x++;
+            }
+            else y++;
         }
-        // Finds the amount of numbers that could possibly reach our target
-        // For example, negatives plus the biggest number. If the result is less than the target, then
-        // we cannot reach the 
-        for (int i = 0; i < nums.length; i++) {
-            if() {}
-        }
-        
-        int[] newList 
-        
-        int[] temp = {min,max};
-        return temp;
     }
 }
