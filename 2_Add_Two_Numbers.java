@@ -1,3 +1,6 @@
+// Runtime: 3ms
+// Memory Usage: 42MB
+
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode answer = generateNode(l1, l2, 0);
@@ -19,8 +22,6 @@ class Solution {
         }
         
         ListNode current = new ListNode();
-        //if (l1.equals(null)) {l1.val = 0;}
-        //if (l2.equals(null)) {l2.val = 0;}
         int value = l1.val + l2.val + carry;
         carry = 0;
         if (value >= 10) {
